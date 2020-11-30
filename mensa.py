@@ -79,6 +79,7 @@ if args.debug is True:
     jprint(mahlzeit.json())
 
 if args.tomorrow is True:
+    today = datetime.date.today()
     tomorrow = today + datetime.timedelta(days=1)
     day_date = tomorrow
     canteenprint(day_date)
