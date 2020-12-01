@@ -11,3 +11,5 @@
 
 - possibility to pass the Cantina ID from the command line
 - alert system for food intolerance/ printing notes
+
+![Screenshot](Screenshot_mensa.png)
