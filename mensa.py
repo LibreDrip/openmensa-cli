@@ -65,8 +65,10 @@ def check_closed(day_date):
 if not len(sys.argv) > 1:
     today = datetime.date.today()
     day_date = today
-    canteenprint(day_date)
-    # print(test)
+    if not check_closed(day_date):
+            canteenprint(day_date)
+    else:
+        print("closed!")
 
 
 if args.debug is True:
@@ -82,7 +84,10 @@ if args.tomorrow is True:
     today = datetime.date.today()
     tomorrow = today + datetime.timedelta(days=1)
     day_date = tomorrow
-    canteenprint(day_date)
+    if not check_closed(day_date):
+            canteenprint(day_date)
+    else:
+        print("closed!")
 
 if args.week is True:
     today = datetime.date.today()
@@ -91,3 +96,4 @@ if args.week is True:
         if not check_closed(day_date):
             print(day_date.strftime('%A') + ":")
             canteenprint(day_date)
+            print("------")
